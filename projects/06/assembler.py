@@ -31,6 +31,13 @@ with open(source,"r") as f:
 #         wfile.write(d+"\n")
 k=0
 labelsAndVariables = {"SCREEN":"100000000000000","KBD":"110000000000000"}
+labelsAndVariables["SP"]=binary_repr(0,15)
+labelsAndVariables["LCL"]=binary_repr(1,15)
+labelsAndVariables["ARG"]=binary_repr(2,15)
+labelsAndVariables["THIS"]=binary_repr(3,15)
+labelsAndVariables["THAT"]=binary_repr(4,15)
+for i in range(0,16):
+    labelsAndVariables["R"+str(i)]=binary_repr(i,15)
 compute = {
     "0":"0101010",
     "1":"0111111",
@@ -118,7 +125,7 @@ for d in rd:
         k=k+1
     else:
         k=k+1
-k=0
+k=16
 for i in labelsAndVariables:
    if(labelsAndVariables[i]==None):
        labelsAndVariables[i]=binary_repr(k,15)
