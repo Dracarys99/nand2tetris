@@ -3,7 +3,7 @@
 // by Nisan and Schocken, MIT Press.
 // File name: projects/07/MemoryAccess/PointerTest/PointerTest.tst
 
-load PointerTest.asm,
+load PointerTest.hack,
 output-file PointerTest.out,
 compare-to PointerTest.cmp,
 output-list RAM[256]%D1.6.1 RAM[3]%D1.6.1 
