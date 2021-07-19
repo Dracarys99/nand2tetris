@@ -25,7 +25,7 @@ jobs:
       - name: Get version
         id: get_version
         run: |
-          echo "::set-output name=version::$(echo \"0.0.1\")"
+          echo "::set-output name=version::$(echo 0.0.2)"
       
       - name: Tag
         id: create_tag
@@ -35,3 +35,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
           custom_tag: ${{ steps.get_version.outputs.version }} 
           create_annotated_tag: True
+          tag_prefix: ''
